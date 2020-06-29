@@ -1,0 +1,64 @@
+--- C:\Users\11039\Documents\Visual Studio 2019\MultipleCycle\MultipleCycle\MultipleCycle.cpp 
+00E41810  push        ebp  
+00E41811  mov         ebp,esp  
+00E41813  sub         esp,0FCh  
+00E41819  push        ebx  
+00E4181A  push        esi  
+00E4181B  push        edi  
+00E4181C  lea         edi,[ebp-0FCh]  
+00E41822  mov         ecx,3Fh  
+00E41827  mov         eax,0CCCCCCCCh  
+00E4182C  rep stos    dword ptr es:[edi]  
+00E4182E  mov         ecx,offset _86CEC0B2_MultipleCycle@cpp (0E4C003h)  
+00E41833  call        @__CheckForDebuggerJustMyCode@4 (0E41217h)  
+00E41838  mov         dword ptr [count],0  
+00E4183F  mov         dword ptr [i],0  
+00E41846  jmp         main+41h (0E41851h)  
+00E41848  mov         eax,dword ptr [i]  
+00E4184B  add         eax,1  
+00E4184E  mov         dword ptr [i],eax  
+00E41851  cmp         dword ptr [i],0Ah  
+00E41855  jge         main+0A0h (0E418B0h)  
+00E41857  mov         dword ptr [j],0  
+00E4185E  jmp         main+59h (0E41869h)  
+00E41860  mov         eax,dword ptr [j]  
+00E41863  add         eax,1  
+00E41866  mov         dword ptr [j],eax  
+00E41869  cmp         dword ptr [j],0Ah  
+00E4186D  jge         main+9Eh (0E418AEh)  
+00E4186F  mov         dword ptr [k],0  
+00E41876  jmp         main+71h (0E41881h)  
+00E41878  mov         eax,dword ptr [k]  
+00E4187B  add         eax,1  
+00E4187E  mov         dword ptr [k],eax  
+00E41881  cmp         dword ptr [k],0Ah  
+00E41885  jge         main+9Ch (0E418ACh)  
+00E41887  mov         dword ptr [l],0  
+00E4188E  jmp         main+89h (0E41899h)  
+00E41890  mov         eax,dword ptr [l]  
+00E41893  add         eax,1  
+00E41896  mov         dword ptr [l],eax  
+00E41899  cmp         dword ptr [l],0Ah  
+00E4189D  jge         main+9Ah (0E418AAh)  
+00E4189F  mov         eax,dword ptr [count]  
+00E418A2  add         eax,1  
+00E418A5  mov         dword ptr [count],eax  
+00E418A8  jmp         main+80h (0E41890h)  
+00E418AA  jmp         main+68h (0E41878h)  
+00E418AC  jmp         main+50h (0E41860h)  
+00E418AE  jmp         main+38h (0E41848h)  
+00E418B0  mov         eax,dword ptr [count]  
+00E418B3  push        eax  
+00E418B4  push        offset string "%d\n" (0E47B30h)  
+00E418B9  call        _printf (0E41046h)  
+00E418BE  add         esp,8  
+00E418C1  xor         eax,eax  
+00E418C3  pop         edi  
+00E418C4  pop         esi  
+00E418C5  pop         ebx  
+00E418C6  add         esp,0FCh  
+00E418CC  cmp         ebp,esp  
+00E418CE  call        __RTC_CheckEsp (0E41221h)  
+00E418D3  mov         esp,ebp  
+00E418D5  pop         ebp  
+00E418D6  ret  
